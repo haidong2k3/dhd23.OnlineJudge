@@ -1,4 +1,4 @@
-# Working path
+## Working path
 - Luôn chọn bài "khó hơn 1 chút" so với năng lực
 - Nên stick với 1 topic cho đến depth nhất định + thỉnh thoảng lm contest
 - Deep thinking: 
@@ -16,3 +16,4 @@
 
 => Khi rảnh, nghĩ về problem và solving
 => Tự xây dựng dsa relation graph
+
