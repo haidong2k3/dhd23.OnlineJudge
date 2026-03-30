@@ -1,4 +1,4 @@
-### Resources
+## Resources
 
 Algorithms for Competitive Programming
 https://cp-algorithms.com/
@@ -18,8 +18,6 @@ https://usaco.guide/
 W3schools - c++ Turtorial
 https://www.w3schools.com/cpp/default.asp
 
-
-### Books/Docs
 Competitive Programmer’s Handbook (CPH) 
 [Antti Laaksonen]
 
@@ -29,4 +27,12 @@ An Introduction To Thee USA Computing Olympiad (IntroToUSACO)
 Principles of Algorithmic Problem Solving (PAPS)
 [Johan Sannemo]
 
+How To Become Red Coder? (codeforces.com)
+https://youtu.be/y7169jEvb-Y?si=Et4PZUla9AMU7z3E
+
+From Beginner to Grandmaster - Complete Roadmap for Competitive Programming
+https://youtu.be/bSdp2WeyuJY?si=UA7yKC9Uy5QrFXJy
+
+C++ Concepts
+https://www.w3schools.com/cpp/default.asp
 

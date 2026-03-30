@@ -5,27 +5,72 @@
 #include <string>
 #include <vector>
 
+#include <numeric>
 #include <algorithm>
 #include <unordered_map>
 
 using namespace std;
 
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    
+    return gcd(b, a % b); 
+}
+
 void solve()
 {
-    // input
     int n;
     cin >> n;
 
-    vector<long long> a;
+    vector<int> a;
     for (int i = 0; i < n; i++)
     {
-        long long tmp;
+        int tmp;
         cin >> tmp;
+        
         a.push_back(tmp);
     }
-
-    // solve
     
+    vector<int> b;
+    for (int i = 0; i < n; i++)
+    {
+        int tmp;
+        cin >> tmp;
+
+        b.push_back(tmp);
+    }
+
+    //
+    vector<int> pairGcd;
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        int tmp = gcd(a[i], a[i + 1]);
+        pairGcd.push_back(tmp);
+    }
+
+    int res = 0;
+    if (a[0] > pairGcd[0])
+    {
+        res++;
+    }
+
+    if (a[n - 1] > pairGcd[n - 2])
+    {
+        res++;
+    }
+
+    for (int i = 1; i < n - 1; i++)
+    {
+        if (a[i] > pairGcd[i - 1] * pairGcd[i])
+            res++;
+    }
+
+    //
+
+    cout << res << endl;
 }
 
 int main()

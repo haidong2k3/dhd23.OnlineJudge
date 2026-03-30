@@ -8,7 +8,6 @@ lldb --version
 - debug -> sai logic
 => input bằng file
 
-
 ###
 [terminal]
 > clang++ -std=c++17 main.cpp -o main && ./main
