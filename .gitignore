@@ -1,8 +1,9 @@
+# macOS
 .DS_Store
+
+# Local env
 .vscode
 
-problemA
-problemB
-problemC
-
-dplan.md
+# Local setup
+Problems
+.proma
