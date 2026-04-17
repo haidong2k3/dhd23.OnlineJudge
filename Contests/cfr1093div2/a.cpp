@@ -8,35 +8,50 @@
 #include <numeric>
 #include <algorithm>
 #include <unordered_map>
-#include <cmath>
 
 using namespace std;
 
 void solve()
 {
+    // input
     int n;
     cin >> n;
 
-    string s;
-    cin >> s;
-
-    int cnt = 1;
-    int longgroup = 0;
-
-    for (int i = 1; i < n; i++)
+    vector<int> a;
+    for (int i = 0 ; i < n; i++)
     {
-        if (s[i] != s[i - 1])
-            cnt++;
-        else
-            longgroup = 1;
+        int tmp;
+        cin >> tmp;
+
+        a.push_back(tmp);
     }
 
-    if (s[n - 1] != s[0] && longgroup == 1)
-        cout << cnt + 1 << endl;
-    // else if (s[n - 1] == s[0])
-    //     cout << cnt - 1 << endl;
+    sort(a.begin(), a.end(), [](int x, int y){
+        return x > y;
+    });
+
+    int res = 1;
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (a[i] == a[i + 1])
+        {
+            res = -1;
+            break;
+        }
+    }
+
+    if (res == 1)
+    {
+        for (int i = 0; i < n; i++)
+            cout << a[i] << " ";
+    }
     else
-        cout << cnt << endl;
+    {
+        cout << -1;
+    }
+        
+    cout << endl;
+
 }
 
 int main()

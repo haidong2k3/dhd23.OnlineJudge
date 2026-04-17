@@ -8,56 +8,42 @@
 #include <numeric>
 #include <algorithm>
 #include <unordered_map>
-#include <cmath>
 
 using namespace std;
 
 void solve()
 {
-    int n;
-    cin >> n;
+    // input
+    int n, m;
+    cin >> n >> m;
 
-    string s;
-    cin >> s;
-
-    int cnt0 = 0;
-
+    vector<int> a;
     for (int i = 0; i < n; i++)
     {
-        if (s[i] == '0')
-        {
-            cnt0++;
-        }
+        int tmp;
+        cin >> tmp;
+
+        a.push_back(tmp);
     }
 
-    if (cnt0 == n)
+    int mxSub = 1;
+    int cnt = 1;
+
+    for (int i = 1; i < n; i++)
     {
-        cout << 0 << endl;
-    }
-    else if (cnt0 % 2 == 1)
-    {
-        cout << cnt0 << endl;
-        for (int i = 0; i < n; i++)
+        if (a[i] == a[i - 1])
         {
-            if (s[i] == '0')
-                cout << i + 1 << " ";
+            cnt++;
+            mxSub = max(cnt, mxSub);
         }
-        cout << endl;
-    }
-    else if ((n - cnt0) % 2 == 0)
-    {
-        cout << n - cnt0 << endl;
-        for (int i = 0; i < n; i++)
+        else
         {
-            if (s[i] == '1')
-                cout << i + 1 << " ";
+            cnt = 1;
         }
-        cout << endl;;
+
     }
-    else
-    {
-        cout << -1 << endl;
-    }
+
+    cout << ((mxSub >= m) ? "NO" : "YES") << endl;
 
 }
 
