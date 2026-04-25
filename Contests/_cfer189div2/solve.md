@@ -31,7 +31,29 @@ vậy nên, với ràng buộc ta chỉ có thể "chắc chắn và tối đa" 
 - Ospace(1)
 
 ## C
-ta có 1 bảng không cố định về chiều dài
-duyệt từ đầu đến cuối mảng thì, ta thấy rằng, đây là 1 kiểu mở rộng từ 1 thành phần nhỏ hơn
-và mọi thành phần đề cần thỏa mãn những điều kiện đã đề ra
-...
+đây là bài toán theo kiểu tối ưu phương pháp
+đầu là là 1 table không cố định chiều dài
+một case lớn có thể hình thành (mở rộng về 1 phía) từ 1 case nhỏ hơn
+luôn thỏa mãn những điều kiện nhất định
+=> dự đoán: greedy
+
+ý tưởng là, chọn ô đầu tiên bên trên,
+ô này cần phải thỏa => giống với ô ngay dưới hoặc ô bên phải
+nếu ô ngay dưới giống => move tới pair kế
+nếu ô ngay dưới không thỏa => kiểm tra ô kề phải và tính ô dưới ô kề
+nó sẽ có dạng
+XY/YX hoặc XX/YX hoặc XY/YY
+nếu ô cặp ô kế tiếp là như nhau => cần repaint 1 lần
+nếu không cần repaint "tối thiểu" 1 lần
+tại sao là tối thiểu, vì khi mở rộng tiếp tục, cặp ô kề (dù không cùng màu) vẫn có thể thỏa điều kiện
+do đó, khi duyệt qua từng pair cell trong bảng, ta chỉ cần ktra xem bộ đếm repaint có cần cộng 1 để sửa pair hiện tại hay không, không cần quan tâm đến các pair sau đó (đây là phần greedy cảu bài toán)
+
+một cách cài đặt là duyệt qua từng cặp ô, đánh dánh các cặp có sự khác nhau
+sau đó trong các cặp đã đánh dấu, nếu có các cặp được đánh dấu là kề nhau, ktra xem nó có phải là trường hợp 
+XX/YY không, nếu có loại bỏ đánh dấu
+cuối cùng đếm số điểm đánh dấu
+
+=> Otime(n)
+=> Ospace(n)
+
+## D
