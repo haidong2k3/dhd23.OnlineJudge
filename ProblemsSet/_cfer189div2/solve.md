@@ -57,3 +57,6 @@ cuối cùng đếm số điểm đánh dấu
 => Ospace(n)
 
 ## D
+phân tích bài toán
+nhận diện pattern
+can't solve reason
