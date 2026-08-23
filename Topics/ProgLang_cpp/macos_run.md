@@ -32,6 +32,6 @@ F5
 > ./main < input.txt
 
 ### Compile cho debug
-clang++ -std=c++17 -g -O0 problem.cpp -o solve
+> clang++ -std=c++17 -g -O0 problem.cpp -o solve
 
 
