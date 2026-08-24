@@ -1,9 +1,9 @@
-## DHD23 (mar 27, 2026)
+# DHD23 — DSA
 
-- Learning Data Structure & Alogrithms.
-- Save problems's solution, mainly Leetcode and Codeforces.
-- Understanding and Notes.
+**Since March 27, 2026**
 
-```text
-"It's not about motivation, It's about consistency."
-```
+* Study **Data Structures & Algorithms**.
+* Solve and archive problems, mainly from **LeetCode** and **Codeforces**.
+* Document concepts, insights, and notes.
+
+> "It's not about motivation. It's about consistency."
